@@ -1,0 +1,38 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 29, in script
+    n "You've created a new Ren'Py game."
+TypeError: got an unexpected keyword argument 'side_image'
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 29, in script
+    n "You've created a new Ren'Py game."
+  File "C:\Users\sharo\Downloads\renpy-8.3.4-sdk\renpy\ast.py", line 2579, in execute
+    Say.execute(self)
+  File "C:\Users\sharo\Downloads\renpy-8.3.4-sdk\renpy\ast.py", line 621, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\sharo\Downloads\renpy-8.3.4-sdk\renpy\exports\sayexports.py", line 132, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\sharo\Downloads\renpy-8.3.4-sdk\renpy\character.py", line 1455, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\sharo\Downloads\renpy-8.3.4-sdk\renpy\character.py", line 1106, in do_display
+    display_say(who,
+  File "C:\Users\sharo\Downloads\renpy-8.3.4-sdk\renpy\character.py", line 749, in display_say
+    what_text = renpy.display.screen.get_widget(what_text[0], what_text[1], what_text[2])
+  File "C:\Users\sharo\Downloads\renpy-8.3.4-sdk\renpy\display\screen.py", line 1538, in get_displayable
+    screen.update()
+  File "C:\Users\sharo\Downloads\renpy-8.3.4-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "C:\Users\sharo\Downloads\renpy-8.3.4-sdk\renpy\parameter.py", line 455, in apply_arguments
+    return parameters.apply(args or (), kwargs or {}, ignore_errors)
+  File "C:\Users\sharo\Downloads\renpy-8.3.4-sdk\renpy\parameter.py", line 384, in apply
+    raise TypeError(
+TypeError: got an unexpected keyword argument 'side_image'
+
+Windows-10-10.0.22631 AMD64
+Ren'Py 8.3.4.24120703
+Celestial Puppet 1.0
+Tue Dec 24 01:47:22 2024
